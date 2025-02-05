@@ -1,0 +1,566 @@
+body {
+    background: #0d1117;
+    color: white;
+    scroll-behavior: smooth;
+}
+
+.navbar {
+    background: #161b22;
+}
+
+.navbar .nav-link {
+    color: #ffffff;
+}
+
+.navbar .nav-link:hover {
+    color: #0dcaf0;
+}
+
+section {
+    padding: 50px 0;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+    min-height: 100vh;
+}
+
+.hero img {
+    width: 450px;
+    height: 350px;
+    border-radius: 50%;
+    box-shadow: 0 0 15px #0dcaf0;
+    
+}
+/* Initial setup for the image */
+.hero img {
+width: 300px;
+height: auto;
+border-radius: 50%;
+position: relative;
+animation: imageShake 3s infinite; /* Add animation */
+
+}
+
+/* Create a line around the image */
+.hero img::before {
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+border: 2px solid #0dcaf0; /* Color of the rotating line */
+border-radius: 50%;
+animation: rotateLine 3s infinite linear; /* Line rotating animation */
+
+}
+
+
+
+.hero h1, .hero h2, .hero h3 {
+    color: #fff;
+}
+
+/* Skills Section */
+
+
+/* Projects Section */
+.projects {
+    background-color: #161b22;
+    padding: 80px 0;
+    text-align: left;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    min-height: 100vh;
+}
+
+.project-card {
+    background-color: #212529;
+    border-radius: 10px;
+    padding: 30px;
+    margin: 20px;
+    transition: transform 0.3s;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+}
+
+.project-card h3 {
+    color: #0dcaf0;
+}
+
+/* Modal (Popup) */
+.modal-content {
+    background-color: #161b22;
+    color: white;
+}
+
+.modal-header {
+    border-bottom: 1px solid #444;
+}
+
+.modal-title {
+    color: #0dcaf0;
+}
+
+.modal-body {
+    color: white;
+}
+
+/* Contact Section */
+.contact {
+    background-color: #161b22;
+    padding: 80px 0;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.contact .social-links a {
+    margin: 15px;
+    color: white;
+    font-size: 25px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.contact .social-links a:hover {
+    color: #0dcaf0;
+}
+
+/* Make sure layout is responsive */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero img {
+        margin-top: 20px;
+    }
+}
+
+
+/*xalxulator*/
+
+/* General Styles */
+.calculator {
+border: 1px solid black;
+padding: 25px;
+background-color: rgba(0, 0, 0, 0.5);
+border-radius: 10px;
+box-shadow: 5px 5px 15px black, -5px -5px 10px black;
+width: 100%;
+max-width: 400px; /* Set a max-width to keep it manageable */
+margin: auto; /* Center the calculator */
+}
+
+input {
+width: 100%;
+padding: 12px;
+text-align: right;
+margin: 10px;
+font-size: 50px;
+background-color: rgba(0, 0, 0, 0.4);
+border-radius: 40px;
+outline: none;
+color: white;
+}
+
+button {
+width: 70px;
+margin: 5px;
+border-radius: 10px;
+font-size: 20px;
+padding: 20px 10px;
+background: rgba(0, 0, 0, 0.3);
+color: white;
+border-radius: 30px;
+}
+
+button:hover {
+background: orangered;
+color: white;
+transform: scale(1.1);
+transition: all 0.2s ease;
+}
+
+.operator {
+background-color: orangered;
+}
+
+.operator:hover {
+background: rgba(0, 0, 0, 0.3);
+color: orangered;
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+.calculator {
+width: 90%; /* Ensure the calculator takes most of the screen width on mobile */
+padding: 20px;
+}
+
+input {
+font-size: 40px; /* Reduce the font size on mobile */
+}
+
+button {
+font-size: 18px; /* Reduce the button font size */
+width: 60px; /* Make buttons smaller */
+padding: 15px 8px; /* Adjust button padding for smaller screens */
+}
+
+.calculator button {
+margin: 4px; /* Reduce margin between buttons */
+}
+}
+
+/* For very small screens like phones in portrait mode */
+@media (max-width: 480px) {
+.calculator {
+width: 95%; /* Take even more width on extremely small devices */
+}
+
+input {
+font-size: 30px; /* Make the text smaller for small devices */
+}
+
+button {
+font-size: 16px; /* Smaller button text */
+width: 50px; /* Even smaller buttons */
+padding: 10px 5px; /* Adjust the button size */
+}
+}
+
+
+
+/*tixtakteo*/
+/* Styling for the xontainer (container for game and winner announcement) */
+
+/* General Styles */
+.xontainer {
+margin-bottom: 20px;
+}
+
+/* Styling for the title */
+h1 {
+font-size: 36px;
+color: #333;
+margin-bottom: 30px;
+}
+
+/* Game Container */
+.game {
+display: grid;
+grid-template-columns: repeat(3, 1fr); /* Equal column sizes */
+grid-gap: 10px;
+justify-content: center;
+margin-top: 20px;
+max-width: 350px; /* Limit the width */
+margin: 0 auto; /* Center the game */
+}
+
+/* Style for each game box */
+.box {
+width: 100%;
+height: 100px;
+background-color: #fff;
+border: 2px solid #ccc;
+font-size: 36px;
+font-weight: bold;
+color: #333;
+cursor: pointer;
+transition: background-color 0.3s ease, transform 0.2s ease;
+display: flex;
+align-items: center;
+justify-content: center;
+border-radius: 10px;
+box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+
+/* Winner announcement */
+.sms {
+font-size: 24px;
+color: #0dcaf0;
+text-align: center;
+margin-top: 20px;
+}
+
+#rest {
+margin-top: 20px;
+padding: 10px 20px;
+font-size: 18px;
+background-color: #007bff;
+color: white;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+transition: background-color 0.3s ease;
+}
+
+#rest:hover {
+background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+.game {
+    grid-template-columns: repeat(3, 1fr); /* Maintain 3 columns */
+    width: 80%;
+    margin-top: 20px;
+}
+
+.box {
+    font-size: 30px; /* Adjust font size for mobile */
+    height: 80px; /* Smaller boxes on mobile */
+}
+
+.sms {
+    font-size: 20px; /* Smaller font for winner text */
+}
+
+#rest {
+    font-size: 16px; /* Adjust button size for mobile */
+    padding: 8px 16px;
+}
+}
+
+@media (max-width: 480px) {
+.game {
+    grid-template-columns: repeat(3, 1fr); /* Keep 3 columns on small screens */
+    width: 90%;
+}
+
+.box {
+    font-size: 24px; /* Smaller font size */
+    height: 70px; /* Smaller boxes */
+}
+
+#rest {
+    font-size: 14px; /* Even smaller button font */
+}
+}
+
+/* Dark Mode Styles (optional for the dark theme) */
+.dark .box {
+background-color: #333;
+color: white;
+border-color: #444;
+}
+
+.dark #rest {
+background-color: #1a73e8;
+}
+
+.dark #rest:hover {
+background-color: #0073e6;
+}
+/*extra xode */
+.projects .project-card {
+position: relative;
+background-color: #212529;
+padding: 20px;
+margin: 20px;
+border-radius: 10px;
+transition: transform 0.3s ease;
+overflow: hidden;
+}
+
+.projects .project-card:hover {
+transform: scale(1.05);
+}
+
+/* Lines moving around the project card */
+.projects .project-card::before,
+.projects .project-card::after {
+content: '';
+position: absolute;
+width: 0;
+height: 2px;
+background-color: #0dcaf0;
+transition: all 0.4s ease;
+}
+
+.projects .project-card::before {
+top: 0;
+left: 0;
+right: 0;
+animation: moveLines 2s infinite alternate;
+}
+
+.projects .project-card::after {
+bottom: 0;
+left: 0;
+right: 0;
+animation: moveLines 2s 1s infinite alternate;
+}
+
+/* Animating the lines */
+@keyframes moveLines {
+0% {
+    width: 0;
+}
+50% {
+    width: 100%;
+}
+100% {
+    width: 0;
+}
+}
+
+/* Contact Section Button Styles */
+.contact .social-links a {
+position: relative;
+display: inline-block;
+padding: 10px 20px;
+margin: 10px;
+font-size: 16px;
+font-weight: 600;
+text-transform: uppercase;
+border-radius: 5px;
+transition: transform 0.3s ease;
+color: #fff;
+text-decoration: none;
+}
+.contact h2{
+text-align: left;
+margin-bottom: 30px;
+border-bottom: 3px solid #0dcaf0;
+display: inline-block;
+
+}
+
+
+
+
+/* Lines moving around the buttons */
+.contact .social-links a::before,
+.contact .social-links a::after {
+content: '';
+position: absolute;
+width: 0;
+height: 2px;
+background-color: #0dcaf0;
+transition: all 0.4s ease;
+}
+
+.contact .social-links a::before {
+top: 0;
+left: 0;
+right: 0;
+animation: moveLines 2s infinite alternate;
+}
+
+.contact .social-links a::after {
+bottom: 0;
+left: 0;
+right: 0;
+animation: moveLines 2s 1s infinite alternate;
+}
+
+/* Animating the lines */
+@keyframes moveLines {
+0% {
+    width: 0;
+}
+50% {
+    width: 100%;
+}
+100% {
+    width: 0;
+}
+}
+
+/* Skills Section Progress Bar Styles */
+.skills .progress {
+position: relative;
+height: 40px;
+margin-bottom: 15px;
+background-color: hsl(0, 0%, 96%);
+border-radius: 30px;
+
+
+}
+#skills{
+min-height: 100vh;
+justify-content:center ;
+align-items: center;
+display: flex;
+
+}
+h2{
+text-align: left;
+}
+#skills h2{
+text-align: left;
+margin-bottom: 30px;
+border-bottom: 3px solid #0dcaf0;
+display: inline-block;
+
+}
+.skills .progress-bar {
+position: relative;
+text-align: center;
+line-height: 25px;
+font-weight: bold;
+color: white;
+border-radius: 5px;
+transition: width 1.5s ease-in-out;
+background-color: #212529;
+border-radius: 30px;
+height: 40px;
+}
+
+/* Lines moving around the progress bars */
+.skills .progress-bar::before,
+.skills .progress-bar::after {
+content: '';
+position: absolute;
+width: 0;
+height: 2px;
+background-color: #0dcaf0;
+transition: all 0.4s ease;
+}
+
+.skills .progress-bar::before {
+top: 0;
+left: 0;
+right: 0;
+animation: moveLines 2s infinite alternate;
+}
+
+.skills .progress-bar::after {
+bottom: 0;
+left: 0;
+right: 0;
+animation: moveLines 2s 1s infinite alternate;
+}
+
+/* Animating the lines */
+@keyframes moveLines {
+0% {
+    width: 0;
+}
+50% {
+    width: 100%;
+}
+100% {
+    width: 0;
+}
+}
+
+/* Adding custom colors for different progress bars */
+
+
